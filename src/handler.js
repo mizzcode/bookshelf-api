@@ -106,9 +106,9 @@ const getAllBooks = (req, h) => {
 const getDetailBooks = (req, h) => {
   const { bookId } = req.params;
 
-  const selectedBook = books.filter((book) => book.id === bookId)[0];
+  const book = books.filter((b) => b.id === bookId)[0];
 
-  if (selectedBook === null || selectedBook === undefined) {
+  if (book === null || book === undefined) {
     const response = h.response({
       status: 'fail',
       message: 'Buku tidak ditemukan',
@@ -120,7 +120,7 @@ const getDetailBooks = (req, h) => {
   const response = h.response({
     status: 'success',
     data: {
-      selectedBook,
+      book,
     },
   });
   response.code(200);
@@ -137,7 +137,7 @@ const editBook = (req, h) => {
   if (name === null || name === undefined) {
     const response = h.response({
       status: 'fail',
-      message: 'Gagal memperbaharui buku. Mohon isi nama buku',
+      message: 'Gagal memperbarui buku. Mohon isi nama buku',
     });
     response.code(400);
     return response;
