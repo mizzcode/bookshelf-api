@@ -3,19 +3,19 @@
 Saya membuat API ini untuk keperluan **Submission** di platform <a href="dicoding.com">Dicoding</a>
 
 ## Installation
-- Clone Repository
+1. Clone the repository
   
 ```bash
 git clone https://github.com/mizzcode/bookshelf-api.git
 ```
 
-- Install dependency yang dibutuhkan
+2. Install dependencies
 
 ```bash
 npm install
 ```
 
-- Run for development
+3. Run for development
 
 ```bash
 npm run start-dev
